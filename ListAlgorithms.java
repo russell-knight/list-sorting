@@ -1,3 +1,4 @@
+/**Trying my hand at creating different sorting algorithms*/
 public class ListAlgorithms {
 
 	private static int[] numbers = {8,7,6,5,4,3,2,1};
