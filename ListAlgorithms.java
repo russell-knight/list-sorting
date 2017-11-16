@@ -32,6 +32,10 @@ public class ListAlgorithms {
 		}
 	}
 	
+	/**
+		printList prints an array to the output.
+	*/
+	
 	public static void printList(int[] list) {
 	
 		System.out.print("{");
@@ -57,8 +61,8 @@ public class ListAlgorithms {
 	
 	public static void swapElements(int[] array, int i, int j) {
 	
-		array[i] += array[j];
-		array[j] = array[i] - array[j];
-		array[i] -= array[j];
+		int t = array[i];
+		array[i] = array[j];
+		array[j] = t;
 	}
 }
