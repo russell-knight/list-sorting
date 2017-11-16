@@ -52,7 +52,7 @@ public class ListAlgorithms {
 	}
 	
 	/**
-		swapElements is a method used to switch the index location of two adjacent elements.
+		swapElements is a method used to switch the positions of two elements in an array
 	*/
 	
 	public static void swapElements(int[] array, int i, int j) {
