@@ -4,7 +4,8 @@ public class ListAlgorithms {
 	
 	public static void main(String args[]) {
 	
-		bubbleSort(numbers);
+		//bubbleSort(numbers);
+		insertionSort(numbers);
 	}
 	
 	/**
@@ -25,44 +26,69 @@ public class ListAlgorithms {
 			
 					swapElements(unsortedList, i+1, i);	
 					swapFlag = true;
-					printList(unsortedList);
+					printArray(unsortedList);
 				
 				}
 			}
 		}
 	}
 	
+	
+	public static void insertionSort(int[] A) {
+		
+		printArray(A);
+	
+		for (int i = 1; i < A.length; i++) {
+		
+			int key = A[i];
+			int j = i-1;
+			
+			while (j >= 0 && A[j] > key) {
+			
+				A[j+1] = A[j];
+				j--;
+				
+				printArray(A);
+			}
+			
+			A[j+1] = key;
+			
+			printArray(A);
+		}
+	}
+	
 	/**
-		printList prints an array to the output.
+		printArray prints an array to the output.
 	*/
 	
-	public static void printList(int[] list) {
+	public static void printArray(int[] A) {
 	
 		System.out.print("{");
 		
-		for (int i = 0; i < list.length; i++) {
+		for (int i = 0; i < A.length; i++) {
 			
-			if (i != list.length - 1) {
-				System.out.print(list[i] + ",");
+			if (i != A.length - 1) {
+				System.out.print(A[i] + ",");
 			}
 			else {
-				System.out.print(list[i]);
+				System.out.print(A[i]);
 			}
 			
 		}
 		
 		System.out.print("}");
-		System.out.println(); // Newline to separate lists
+		System.out.println(); // Newline to print next array below	
 	}
 	
 	/**
 		swapElements is a method used to switch the positions of two elements in an array
-	*/
+	*/ 
 	
-	public static void swapElements(int[] array, int i, int j) {
+	public static void swapElements(int[] A, int i, int j) {
 	
-		int t = array[i];
-		array[i] = array[j];
-		array[j] = t;
+		int t = A[i];
+		A[i] = A[j];
+		A[j] = t;
 	}
+	
 }
